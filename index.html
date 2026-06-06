@@ -1,127 +1,163 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurevoo</title>
 
-    <style>
+```
+<style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
 
-        body{
-            background-color:#000;
-            color:white;
-            font-family:Arial, sans-serif;
-        }
+    body{
+        background-color:#000;
+        color:white;
+        font-family:Arial, sans-serif;
+    }
 
-        /* Contenitore immagine */
-        .main-image{
-            width:100%;
-            text-align:center;
-            padding-top:20px;
-            background:#000;
-        }
+    /* Contenitore immagine */
+    .main-image{
+        width:100%;
+        text-align:center;
+        padding-top:20px;
+        background:#000;
+    }
+
+    .main-image img{
+        max-width:95%;
+        max-height:75vh;
+        height:auto;
+        display:block;
+        margin:auto;
+    }
+
+    /* Footer */
+    .footer{
+        width:100%;
+        background:#000;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:30px;
+
+        padding:20px;
+
+        border-top:1px solid #333;
+    }
+
+    /* QR Code */
+    .footer img{
+        width:120px;
+        height:120px;
+        background:#fff;
+        padding:6px;
+        border-radius:12px;
+        box-shadow:0 0 15px rgba(255,255,255,0.25);
+    }
+
+    .footer-text{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    .footer-text a{
+        color:#4db8ff;
+        text-decoration:none;
+        font-weight:bold;
+    }
+
+    .footer-text a:hover{
+        text-decoration:underline;
+    }
+
+    .phone{
+        font-size:20px;
+        font-weight:bold;
+        color:#ffffff !important;
+    }
+
+    .phone:hover{
+        color:#ffffff !important;
+    }
+
+    /* Smartphone */
+    @media (max-width:768px){
 
         .main-image img{
-            max-width:95%;
-            max-height:75vh;
-            height:auto;
-            display:block;
-            margin:auto;
+            max-width:100%;
+            max-height:none;
         }
 
-        /* Footer */
         .footer{
-            width:100%;
-            background:#000;
-
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            gap:30px;
-
-            padding:20px;
-
-            border-top:1px solid #333;
+            flex-direction:column;
+            text-align:center;
+            gap:15px;
         }
 
         .footer img{
-            width:100px;
-            height:100px;
-            background:#fff;
-            padding:4px;
+            width:90px;
+            height:90px;
         }
 
         .footer-text{
+            font-size:15px;
+        }
+
+        .phone{
             font-size:18px;
-            line-height:1.6;
         }
+    }
 
-        .footer-text a{
-            color:#4db8ff;
-            text-decoration:none;
-            font-weight:bold;
-        }
+</style>
+```
 
-        .footer-text a:hover{
-            text-decoration:underline;
-        }
-
-        /* Versione smartphone */
-        @media (max-width:768px){
-
-            .main-image img{
-                max-width:100%;
-                max-height:none;
-            }
-
-            .footer{
-                flex-direction:column;
-                text-align:center;
-                gap:15px;
-            }
-
-            .footer img{
-                width:80px;
-                height:80px;
-            }
-
-            .footer-text{
-                font-size:15px;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
 
-    <!-- Immagine principale -->
-    <div class="main-image">
-        <img src="aurevoo.jpeg" alt="Aurevoo">
+```
+<!-- Immagine principale -->
+<div class="main-image">
+    <img src="aurevoo.jpeg" alt="Aurevoo">
+</div>
+
+<!-- Footer -->
+<div class="footer">
+
+    <img src="qr_code.png" alt="QR Code">
+
+    <div class="footer-text">
+
+        <a href="https://www.pianetaelettronica.com" target="_blank">
+            www.pianetaelettronica.com
+        </a>
+
+        <br>
+
+        Un progetto del Dott. Paolo Carrisi
+
+        <br>
+
+        in collaborazione con Pianeta Elettronica.
+
+        <br>
+
+        Info e contatti:
+        <a class="phone" href="tel:+393517535286">
+            +39 351 753 5286
+        </a>
+
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-
-        <img src="qr_code.png" alt="QR Code">
-
-        <div class="footer-text">
-            <a href="https://www.pianetaelettronica.com" target="_blank">
-                www.pianetaelettronica.com
-            </a>
-            <br>
-            Un progetto del Dott. Paolo Carrisi
-            <br>
-            in collaborazione con Pianeta Elettronica. Info e contatti: +39 3517535286
-        </div>
-
-    </div>
+</div>
+```
 
 </body>
 </html>
