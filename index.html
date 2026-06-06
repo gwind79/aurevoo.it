@@ -17,9 +17,10 @@
             background-color:#000;
             font-family:Arial, sans-serif;
             overflow:hidden;
+            color:white;
         }
 
-        /* Immagine a schermo intero senza tagli */
+        /* Immagine principale */
         .background{
             position:fixed;
             top:0;
@@ -36,8 +37,60 @@
             z-index:1;
         }
 
+        /* Footer */
+        .footer{
+            position:fixed;
+            bottom:20px;
+            left:0;
+            width:100%;
 
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:25px;
 
+            z-index:10;
+
+            background:rgba(0,0,0,0.65);
+            padding:10px;
+        }
+
+        .footer img{
+            width:90px;
+            height:90px;
+            border-radius:8px;
+            background:white;
+            padding:4px;
+        }
+
+        .footer-text{
+            font-size:18px;
+            line-height:1.5;
+            text-align:left;
+        }
+
+        .footer-text a{
+            color:#4db8ff;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        @media (max-width: 768px){
+
+            .footer{
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .footer img{
+                width:70px;
+                height:70px;
+            }
+
+            .footer-text{
+                font-size:14px;
+                text-align:center;
+            }
         }
 
     </style>
@@ -47,7 +100,23 @@
 
     <div class="background"></div>
 
+    <div class="footer">
 
+        <img src="qrcode.png" alt="QR Code">
+
+        <div class="footer-text">
+            <strong>
+                <a href="https://www.pianetaelettronica.com" target="_blank">
+                    www.pianetaelettronica.com
+                </a>
+            </strong>
+            <br>
+            Un progetto del Dott. Paolo Carrisi
+            <br>
+            in collaborazione con Pianeta Elettronica
+        </div>
+
+    </div>
 
 </body>
 </html>
