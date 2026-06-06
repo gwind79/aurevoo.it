@@ -7,7 +7,12 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #111;
+            background-image: url('aurevoo.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
             color: #fff;
             display: flex;
             justify-content: center;
@@ -15,21 +20,29 @@
             height: 100vh;
             text-align: center;
         }
+
+        /* Sfondo semitrasparente dietro al testo */
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
         h1 {
             font-size: 40px;
+            margin-top: 0;
         }
+
         p {
             font-size: 18px;
-            opacity: 0.7;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="content">
         <h1>Aurevoo</h1>
-        <p></p>
         <p>Occhiali smart per persone ipoacusiche. Il futuro inizia qui!</p>
-        <img src="aurevoo.jpeg" alt="logo" style="width:150px; margin-bottom:20px;">
         <p>Sito in costruzione 🚧</p>
     </div>
 </body>
